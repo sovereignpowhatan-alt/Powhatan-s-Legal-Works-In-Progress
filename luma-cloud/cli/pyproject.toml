@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "luma-cli"
+version = "0.1.0"
+description = "CLI for Luma Cloud"
+authors = [{name = "Luma", email = "dev@luma.local"}]
+requires-python = ">=3.10"
+dependencies = [
+  "typer~=0.12",
+  "requests~=2.32",
+  "rich~=13.7"
+]
+
+[project.scripts]
+luma = "luma_cli.main:app"
+
+[tool.setuptools.packages.find]
+where = ["."]
